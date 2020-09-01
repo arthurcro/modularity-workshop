@@ -4,7 +4,7 @@ import SwiftUI
 struct DesigningDependencyApp: App {
     var body: some Scene {
         WindowGroup {
-            AppView(viewModel: AppViewModel())
+            AppView(viewModel: AppViewModel(weatherClient: WeatherClient()))
         }
     }
 }

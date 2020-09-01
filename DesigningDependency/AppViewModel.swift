@@ -6,14 +6,17 @@ class AppViewModel: ObservableObject {
     @Published var temperature: String?
     @Published var isLoading: Bool
 
+    private let weatherClient: WeatherClient
     private var cancellable: AnyCancellable?
 
     init(
         isLoading: Bool = false,
-        temperature: String? = nil
+        temperature: String? = nil,
+        weatherClient: WeatherClient
     ) {
         self.isLoading = isLoading
         self.temperature = temperature
+        self.weatherClient = weatherClient
     }
 
     func computeTapped() {
@@ -21,11 +24,8 @@ class AppViewModel: ObservableObject {
         temperature = nil
         isLoading = true
 
-        cancellable = URLSession
-            .shared
-            .dataTaskPublisher(for: URL(string: "https://www.metaweather.com/api/location/2459115")!)
-            .map { data, _ in data }
-            .decode(type: WeatherResponse.self, decoder: JSONDecoder.weatherJsonDecoder)
+        cancellable = weatherClient
+            .temperature()
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] error in self?.isLoading = false },

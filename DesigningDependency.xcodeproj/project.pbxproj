@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D1E734524FE4DAA005C1D81 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E734424FE4DAA005C1D81 /* AppViewModel.swift */; };
+		8D1E738724FE838F005C1D81 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E738624FE838F005C1D81 /* WeatherClient.swift */; };
 		8D57370924FD2749006E54DD /* DesigningDependencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */; };
 		8D57370B24FD2749006E54DD /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370A24FD2749006E54DD /* AppView.swift */; };
 		8D57370D24FD274A006E54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57370C24FD274A006E54DD /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		8D1E734424FE4DAA005C1D81 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8D1E738624FE838F005C1D81 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		8D57370524FD2749006E54DD /* DesigningDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesigningDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesigningDependencyApp.swift; sourceTree = "<group>"; };
 		8D57370A24FD2749006E54DD /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8D57370C24FD274A006E54DD /* Assets.xcassets */,
 				8D57371124FD274B006E54DD /* Info.plist */,
 				8D57370E24FD274B006E54DD /* Preview Content */,
+				8D1E738624FE838F005C1D81 /* WeatherClient.swift */,
 			);
 			path = DesigningDependency;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D57370B24FD2749006E54DD /* AppView.swift in Sources */,
+				8D1E738724FE838F005C1D81 /* WeatherClient.swift in Sources */,
 				8D57370924FD2749006E54DD /* DesigningDependencyApp.swift in Sources */,
 				8D1E734524FE4DAA005C1D81 /* AppViewModel.swift in Sources */,
 			);
