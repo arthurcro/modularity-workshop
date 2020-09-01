@@ -32,13 +32,6 @@
 			remoteGlobalIDString = 8D1851C024FE985E000F2A65;
 			remoteInfo = TemperatureFeature;
 		};
-		8D1851CD24FE985E000F2A65 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D57370424FD2749006E54DD;
-			remoteInfo = DesigningDependency;
-		};
 		8D1851D424FE985E000F2A65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
@@ -291,7 +284,6 @@
 			);
 			dependencies = (
 				8D1851CC24FE985E000F2A65 /* PBXTargetDependency */,
-				8D1851CE24FE985E000F2A65 /* PBXTargetDependency */,
 			);
 			name = TemperatureFeatureTests;
 			productName = TemperatureFeatureTests;
@@ -370,7 +362,6 @@
 					};
 					8D1851C824FE985E000F2A65 = {
 						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 8D57370424FD2749006E54DD;
 					};
 					8D57370424FD2749006E54DD = {
 						CreatedOnToolsVersion = 12.0;
@@ -497,11 +488,6 @@
 			target = 8D1851C024FE985E000F2A65 /* TemperatureFeature */;
 			targetProxy = 8D1851CB24FE985E000F2A65 /* PBXContainerItemProxy */;
 		};
-		8D1851CE24FE985E000F2A65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D57370424FD2749006E54DD /* DesigningDependency */;
-			targetProxy = 8D1851CD24FE985E000F2A65 /* PBXContainerItemProxy */;
-		};
 		8D1851D524FE985E000F2A65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1851C024FE985E000F2A65 /* TemperatureFeature */;
@@ -590,7 +576,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesigningDependency.app/DesigningDependency";
 			};
 			name = Debug;
 		};
@@ -610,7 +595,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesigningDependency.app/DesigningDependency";
 			};
 			name = Release;
 		};
