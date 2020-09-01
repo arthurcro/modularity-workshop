@@ -1,12 +1,13 @@
 import Combine
 import Foundation
 
-protocol WeatherClientProtocol {
-    func temperature() -> AnyPublisher<WeatherResponse, Error>
+struct WeatherClient {
+    var temperature: () -> AnyPublisher<WeatherResponse, Error>
 }
 
-struct WeatherClient: WeatherClientProtocol {
-    func temperature() -> AnyPublisher<WeatherResponse, Error> {
+extension WeatherClient {
+
+    static let live = Self {
         return URLSession
             .shared
             .dataTaskPublisher(for: URL(string: "https://www.metaweather.com/api/location/2459115")!)
@@ -15,45 +16,16 @@ struct WeatherClient: WeatherClientProtocol {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
-}
 
-//struct ColdWeatherClient: WeatherClientProtocol {
-//    func temperature() -> AnyPublisher<WeatherResponse, Error> {
-//        return Just(
-//            WeatherResponse(
-//                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: 30, minTemp: -10, theTemp: -5)]
-//            )
-//        )
-//        .setFailureType(to: Error.self)
-//        .eraseToAnyPublisher()
-//    }
-//}
-//
-//struct VeryHotWeatherClient: WeatherClientProtocol {
-//
-//    func temperature() -> AnyPublisher<WeatherResponse, Error> {
-//        return Just(
-//            WeatherResponse(
-//                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: 30000, minTemp: 10, theTemp: 2500)]
-//            )
-//        )
-//        .setFailureType(to: Error.self)
-//        .eraseToAnyPublisher()
-//    }
-//}
+    static let hot = Self {
+        return Just(WeatherResponse.mock(temperature: 500))
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
+    }
 
-struct MockWeatherClient: WeatherClientProtocol {
-
-    var _temperature: Double
-
-    func temperature() -> AnyPublisher<WeatherResponse, Error> {
-        return Just(
-            WeatherResponse(
-                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: .greatestFiniteMagnitude, minTemp: .leastNormalMagnitude, theTemp: _temperature)]
-            )
-        )
-        .setFailureType(to: Error.self)
-        .eraseToAnyPublisher()
+    static let cold = Self {
+        return Just(WeatherResponse.mock(temperature: -500))
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
     }
 }
-

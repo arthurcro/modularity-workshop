@@ -6,13 +6,13 @@ class AppViewModel: ObservableObject {
     @Published var temperature: String?
     @Published var isLoading: Bool
 
-    private let weatherClient: WeatherClientProtocol
+    private let weatherClient: WeatherClient
     private var cancellable: AnyCancellable?
 
     init(
         isLoading: Bool = false,
         temperature: String? = nil,
-        weatherClient: WeatherClientProtocol
+        weatherClient: WeatherClient
     ) {
         self.isLoading = isLoading
         self.temperature = temperature
@@ -47,16 +47,4 @@ extension JSONDecoder {
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         return jsonDecoder
     }()
-}
-
-struct WeatherResponse: Decodable, Equatable {
-    var consolidatedWeather: [ConsolidatedWeather]
-
-    struct ConsolidatedWeather: Decodable, Equatable {
-        var applicableDate: Date
-        var id: Int
-        var maxTemp: Double
-        var minTemp: Double
-        var theTemp: Double
-    }
 }
