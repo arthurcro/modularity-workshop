@@ -6,13 +6,13 @@ class AppViewModel: ObservableObject {
     @Published var temperature: String?
     @Published var isLoading: Bool
 
-    private let weatherClient: WeatherClient
+    private let weatherClient: WeatherClientProtocol
     private var cancellable: AnyCancellable?
 
     init(
         isLoading: Bool = false,
         temperature: String? = nil,
-        weatherClient: WeatherClient
+        weatherClient: WeatherClientProtocol
     ) {
         self.isLoading = isLoading
         self.temperature = temperature

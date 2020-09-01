@@ -1,7 +1,11 @@
 import Combine
 import Foundation
 
-struct WeatherClient {
+protocol WeatherClientProtocol {
+    func temperature() -> AnyPublisher<WeatherResponse, Error>
+}
+
+struct WeatherClient: WeatherClientProtocol {
     func temperature() -> AnyPublisher<WeatherResponse, Error> {
         return URLSession
             .shared
@@ -12,3 +16,44 @@ struct WeatherClient {
             .eraseToAnyPublisher()
     }
 }
+
+//struct ColdWeatherClient: WeatherClientProtocol {
+//    func temperature() -> AnyPublisher<WeatherResponse, Error> {
+//        return Just(
+//            WeatherResponse(
+//                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: 30, minTemp: -10, theTemp: -5)]
+//            )
+//        )
+//        .setFailureType(to: Error.self)
+//        .eraseToAnyPublisher()
+//    }
+//}
+//
+//struct VeryHotWeatherClient: WeatherClientProtocol {
+//
+//    func temperature() -> AnyPublisher<WeatherResponse, Error> {
+//        return Just(
+//            WeatherResponse(
+//                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: 30000, minTemp: 10, theTemp: 2500)]
+//            )
+//        )
+//        .setFailureType(to: Error.self)
+//        .eraseToAnyPublisher()
+//    }
+//}
+
+struct MockWeatherClient: WeatherClientProtocol {
+
+    var _temperature: Double
+
+    func temperature() -> AnyPublisher<WeatherResponse, Error> {
+        return Just(
+            WeatherResponse(
+                consolidatedWeather: [.init(applicableDate: .init(), id: 0, maxTemp: .greatestFiniteMagnitude, minTemp: .leastNormalMagnitude, theTemp: _temperature)]
+            )
+        )
+        .setFailureType(to: Error.self)
+        .eraseToAnyPublisher()
+    }
+}
+
