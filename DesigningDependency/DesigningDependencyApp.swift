@@ -1,11 +1,12 @@
 import SwiftUI
-import WeatherClient
+import TemperatureFeature
+import WeatherClientLive
 
 @main
 struct DesigningDependencyApp: App {
     var body: some Scene {
         WindowGroup {
-            AppView(viewModel: AppViewModel(weatherClient: .live))
+            TemperatureView(viewModel: TemperatureViewModel(weatherClient: .live))
         }
     }
 }

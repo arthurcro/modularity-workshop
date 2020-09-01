@@ -2,7 +2,7 @@ import Combine
 import Foundation
 import WeatherClient
 
-class AppViewModel: ObservableObject {
+public class TemperatureViewModel: ObservableObject {
 
     @Published var temperature: String?
     @Published var isLoading: Bool
@@ -10,7 +10,7 @@ class AppViewModel: ObservableObject {
     private let weatherClient: WeatherClient
     private var cancellable: AnyCancellable?
 
-    init(
+    public init(
         isLoading: Bool = false,
         temperature: String? = nil,
         weatherClient: WeatherClient

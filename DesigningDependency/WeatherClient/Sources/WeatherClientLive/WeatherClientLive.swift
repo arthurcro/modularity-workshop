@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import WeatherClient
 
 public extension WeatherClient {
     static let live = Self {

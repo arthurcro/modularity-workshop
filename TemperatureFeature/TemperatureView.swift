@@ -1,11 +1,11 @@
 import SwiftUI
 import WeatherClient
 
-struct AppView: View {
+public struct TemperatureView: View {
 
-    @ObservedObject var viewModel: AppViewModel
+    @ObservedObject var viewModel: TemperatureViewModel
 
-    var body: some View {
+    public var body: some View {
         VStack {
             Spacer()
             Text(viewModel.temperature ?? "")
@@ -27,10 +27,16 @@ struct AppView: View {
         }
         .padding()
     }
+
+    public init(
+        viewModel: TemperatureViewModel
+    ) {
+        self.viewModel = viewModel
+    }
 }
 
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(viewModel: AppViewModel(weatherClient: .cold))
+        TemperatureView(viewModel: TemperatureViewModel(weatherClient: .cold))
     }
 }

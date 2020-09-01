@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D1851BB24FE9593000F2A65 /* WeatherClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851BA24FE9593000F2A65 /* WeatherClient */; };
-		8D1E734524FE4DAA005C1D81 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E734424FE4DAA005C1D81 /* AppViewModel.swift */; };
+		8D1851CA24FE985E000F2A65 /* TemperatureFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */; };
+		8D1851D124FE985E000F2A65 /* TemperatureFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1851D024FE985E000F2A65 /* TemperatureFeatureTests.swift */; };
+		8D1851D324FE985E000F2A65 /* TemperatureFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1851C324FE985E000F2A65 /* TemperatureFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D1851D624FE985E000F2A65 /* TemperatureFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */; };
+		8D1851D724FE985E000F2A65 /* TemperatureFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D1851E024FE9883000F2A65 /* WeatherClientLive in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851DF24FE9883000F2A65 /* WeatherClientLive */; };
+		8D1851E124FE98C6000F2A65 /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1E734424FE4DAA005C1D81 /* TemperatureViewModel.swift */; };
+		8D1851E224FE98C6000F2A65 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370A24FD2749006E54DD /* TemperatureView.swift */; };
+		8D1851EA24FE9B19000F2A65 /* WeatherClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851E924FE9B19000F2A65 /* WeatherClient */; };
+		8D1851EC24FE9B19000F2A65 /* WeatherClient in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851E924FE9B19000F2A65 /* WeatherClient */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8D57370924FD2749006E54DD /* DesigningDependencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */; };
-		8D57370B24FD2749006E54DD /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370A24FD2749006E54DD /* AppView.swift */; };
 		8D57370D24FD274A006E54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57370C24FD274A006E54DD /* Assets.xcassets */; };
 		8D57371024FD274B006E54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57370F24FD274B006E54DD /* Preview Assets.xcassets */; };
 		8D57371B24FD274B006E54DD /* DesigningDependencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57371A24FD274B006E54DD /* DesigningDependencyTests.swift */; };
@@ -18,6 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8D1851CB24FE985E000F2A65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1851C024FE985E000F2A65;
+			remoteInfo = TemperatureFeature;
+		};
+		8D1851CD24FE985E000F2A65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57370424FD2749006E54DD;
+			remoteInfo = DesigningDependency;
+		};
+		8D1851D424FE985E000F2A65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1851C024FE985E000F2A65;
+			remoteInfo = TemperatureFeature;
+		};
 		8D57371724FD274B006E54DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8D5736FD24FD2749006E54DD /* Project object */;
@@ -34,12 +62,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D1851DB24FE985E000F2A65 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D1851D724FE985E000F2A65 /* TemperatureFeature.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1851EB24FE9B19000F2A65 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D1851EC24FE9B19000F2A65 /* WeatherClient in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8D1E734424FE4DAA005C1D81 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TemperatureFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1851C324FE985E000F2A65 /* TemperatureFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemperatureFeature.h; sourceTree = "<group>"; };
+		8D1851C424FE985E000F2A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1851C924FE985E000F2A65 /* TemperatureFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1851D024FE985E000F2A65 /* TemperatureFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureFeatureTests.swift; sourceTree = "<group>"; };
+		8D1851D224FE985E000F2A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1E734424FE4DAA005C1D81 /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
 		8D1E954C24FE94D300F776A2 /* WeatherClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WeatherClient; path = DesigningDependency/WeatherClient; sourceTree = "<group>"; };
 		8D57370524FD2749006E54DD /* DesigningDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesigningDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesigningDependencyApp.swift; sourceTree = "<group>"; };
-		8D57370A24FD2749006E54DD /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		8D57370A24FD2749006E54DD /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		8D57370C24FD274A006E54DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D57370F24FD274B006E54DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8D57371124FD274B006E54DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,11 +111,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D1851BE24FE985E000F2A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1851EA24FE9B19000F2A65 /* WeatherClient in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1851C624FE985E000F2A65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1851CA24FE985E000F2A65 /* TemperatureFeature.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D57370224FD2749006E54DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D1851BB24FE9593000F2A65 /* WeatherClient in Frameworks */,
+				8D1851D624FE985E000F2A65 /* TemperatureFeature.framework in Frameworks */,
+				8D1851E024FE9883000F2A65 /* WeatherClientLive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +153,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D1851C224FE985E000F2A65 /* TemperatureFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8D57370A24FD2749006E54DD /* TemperatureView.swift */,
+				8D1E734424FE4DAA005C1D81 /* TemperatureViewModel.swift */,
+				8D1851C324FE985E000F2A65 /* TemperatureFeature.h */,
+				8D1851C424FE985E000F2A65 /* Info.plist */,
+			);
+			path = TemperatureFeature;
+			sourceTree = "<group>";
+		};
+		8D1851CF24FE985E000F2A65 /* TemperatureFeatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D1851D024FE985E000F2A65 /* TemperatureFeatureTests.swift */,
+				8D1851D224FE985E000F2A65 /* Info.plist */,
+			);
+			path = TemperatureFeatureTests;
+			sourceTree = "<group>";
+		};
 		8D1E738B24FE8AF6005C1D81 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +187,8 @@
 				8D57370724FD2749006E54DD /* DesigningDependency */,
 				8D57371924FD274B006E54DD /* DesigningDependencyTests */,
 				8D57372424FD274B006E54DD /* DesigningDependencyUITests */,
+				8D1851C224FE985E000F2A65 /* TemperatureFeature */,
+				8D1851CF24FE985E000F2A65 /* TemperatureFeatureTests */,
 				8D57370624FD2749006E54DD /* Products */,
 				8D1E738B24FE8AF6005C1D81 /* Frameworks */,
 			);
@@ -102,6 +200,8 @@
 				8D57370524FD2749006E54DD /* DesigningDependency.app */,
 				8D57371624FD274B006E54DD /* DesigningDependencyTests.xctest */,
 				8D57372124FD274B006E54DD /* DesigningDependencyUITests.xctest */,
+				8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */,
+				8D1851C924FE985E000F2A65 /* TemperatureFeatureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,8 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */,
-				8D57370A24FD2749006E54DD /* AppView.swift */,
-				8D1E734424FE4DAA005C1D81 /* AppViewModel.swift */,
 				8D57370C24FD274A006E54DD /* Assets.xcassets */,
 				8D57371124FD274B006E54DD /* Info.plist */,
 				8D57370E24FD274B006E54DD /* Preview Content */,
@@ -147,7 +245,59 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8D1851BC24FE985E000F2A65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1851D324FE985E000F2A65 /* TemperatureFeature.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		8D1851C024FE985E000F2A65 /* TemperatureFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D1851D824FE985E000F2A65 /* Build configuration list for PBXNativeTarget "TemperatureFeature" */;
+			buildPhases = (
+				8D1851BC24FE985E000F2A65 /* Headers */,
+				8D1851BD24FE985E000F2A65 /* Sources */,
+				8D1851BE24FE985E000F2A65 /* Frameworks */,
+				8D1851BF24FE985E000F2A65 /* Resources */,
+				8D1851EB24FE9B19000F2A65 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TemperatureFeature;
+			packageProductDependencies = (
+				8D1851E924FE9B19000F2A65 /* WeatherClient */,
+			);
+			productName = TemperatureFeature;
+			productReference = 8D1851C124FE985E000F2A65 /* TemperatureFeature.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D1851C824FE985E000F2A65 /* TemperatureFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D1851DC24FE985E000F2A65 /* Build configuration list for PBXNativeTarget "TemperatureFeatureTests" */;
+			buildPhases = (
+				8D1851C524FE985E000F2A65 /* Sources */,
+				8D1851C624FE985E000F2A65 /* Frameworks */,
+				8D1851C724FE985E000F2A65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D1851CC24FE985E000F2A65 /* PBXTargetDependency */,
+				8D1851CE24FE985E000F2A65 /* PBXTargetDependency */,
+			);
+			name = TemperatureFeatureTests;
+			productName = TemperatureFeatureTests;
+			productReference = 8D1851C924FE985E000F2A65 /* TemperatureFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8D57370424FD2749006E54DD /* DesigningDependency */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D57372A24FD274B006E54DD /* Build configuration list for PBXNativeTarget "DesigningDependency" */;
@@ -155,14 +305,16 @@
 				8D57370124FD2749006E54DD /* Sources */,
 				8D57370224FD2749006E54DD /* Frameworks */,
 				8D57370324FD2749006E54DD /* Resources */,
+				8D1851DB24FE985E000F2A65 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8D1851D524FE985E000F2A65 /* PBXTargetDependency */,
 			);
 			name = DesigningDependency;
 			packageProductDependencies = (
-				8D1851BA24FE9593000F2A65 /* WeatherClient */,
+				8D1851DF24FE9883000F2A65 /* WeatherClientLive */,
 			);
 			productName = DesigningDependency;
 			productReference = 8D57370524FD2749006E54DD /* DesigningDependency.app */;
@@ -213,6 +365,13 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					8D1851C024FE985E000F2A65 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					8D1851C824FE985E000F2A65 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 8D57370424FD2749006E54DD;
+					};
 					8D57370424FD2749006E54DD = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -242,11 +401,27 @@
 				8D57370424FD2749006E54DD /* DesigningDependency */,
 				8D57371524FD274B006E54DD /* DesigningDependencyTests */,
 				8D57372024FD274B006E54DD /* DesigningDependencyUITests */,
+				8D1851C024FE985E000F2A65 /* TemperatureFeature */,
+				8D1851C824FE985E000F2A65 /* TemperatureFeatureTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D1851BF24FE985E000F2A65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1851C724FE985E000F2A65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D57370324FD2749006E54DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,13 +448,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D1851BD24FE985E000F2A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1851E224FE98C6000F2A65 /* TemperatureView.swift in Sources */,
+				8D1851E124FE98C6000F2A65 /* TemperatureViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1851C524FE985E000F2A65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1851D124FE985E000F2A65 /* TemperatureFeatureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D57370124FD2749006E54DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D57370B24FD2749006E54DD /* AppView.swift in Sources */,
 				8D57370924FD2749006E54DD /* DesigningDependencyApp.swift in Sources */,
-				8D1E734524FE4DAA005C1D81 /* AppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +492,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8D1851CC24FE985E000F2A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1851C024FE985E000F2A65 /* TemperatureFeature */;
+			targetProxy = 8D1851CB24FE985E000F2A65 /* PBXContainerItemProxy */;
+		};
+		8D1851CE24FE985E000F2A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D57370424FD2749006E54DD /* DesigningDependency */;
+			targetProxy = 8D1851CD24FE985E000F2A65 /* PBXContainerItemProxy */;
+		};
+		8D1851D524FE985E000F2A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1851C024FE985E000F2A65 /* TemperatureFeature */;
+			targetProxy = 8D1851D424FE985E000F2A65 /* PBXContainerItemProxy */;
+		};
 		8D57371824FD274B006E54DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D57370424FD2749006E54DD /* DesigningDependency */;
@@ -315,6 +520,100 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8D1851D924FE985E000F2A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KT7UVT7F4K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TemperatureFeature/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.crocquevieille.TemperatureFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D1851DA24FE985E000F2A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KT7UVT7F4K;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TemperatureFeature/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.crocquevieille.TemperatureFeature;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8D1851DD24FE985E000F2A65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KT7UVT7F4K;
+				INFOPLIST_FILE = TemperatureFeatureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.crocquevieille.TemperatureFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesigningDependency.app/DesigningDependency";
+			};
+			name = Debug;
+		};
+		8D1851DE24FE985E000F2A65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KT7UVT7F4K;
+				INFOPLIST_FILE = TemperatureFeatureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.crocquevieille.TemperatureFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DesigningDependency.app/DesigningDependency";
+			};
+			name = Release;
+		};
 		8D57372824FD274B006E54DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,6 +733,7 @@
 		8D57372B24FD274B006E54DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +756,7 @@
 		8D57372C24FD274B006E54DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -562,6 +863,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D1851D824FE985E000F2A65 /* Build configuration list for PBXNativeTarget "TemperatureFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1851D924FE985E000F2A65 /* Debug */,
+				8D1851DA24FE985E000F2A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D1851DC24FE985E000F2A65 /* Build configuration list for PBXNativeTarget "TemperatureFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1851DD24FE985E000F2A65 /* Debug */,
+				8D1851DE24FE985E000F2A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8D57370024FD2749006E54DD /* Build configuration list for PBXProject "DesigningDependency" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -601,7 +920,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D1851BA24FE9593000F2A65 /* WeatherClient */ = {
+		8D1851DF24FE9883000F2A65 /* WeatherClientLive */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatherClientLive;
+		};
+		8D1851E924FE9B19000F2A65 /* WeatherClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WeatherClient;
 		};

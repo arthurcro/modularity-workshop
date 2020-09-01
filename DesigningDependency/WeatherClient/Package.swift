@@ -10,8 +10,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "WeatherClient",
+            type: .dynamic,
             targets: ["WeatherClient"]),
         .library(name: "WeatherClientLive",
+                 type: .dynamic,
                  targets: ["WeatherClientLive"]),
     ],
     dependencies: [
