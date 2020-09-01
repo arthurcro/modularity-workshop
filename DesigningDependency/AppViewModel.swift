@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import WeatherClient
 
 class AppViewModel: ObservableObject {
 
@@ -35,16 +36,4 @@ class AppViewModel: ObservableObject {
                 }
             )
     }
-}
-
-extension JSONDecoder {
-
-    static var weatherJsonDecoder: JSONDecoder = {
-        let jsonDecoder = JSONDecoder()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        jsonDecoder.dateDecodingStrategy = .formatted(formatter)
-        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        return jsonDecoder
-    }()
 }

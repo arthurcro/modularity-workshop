@@ -1,4 +1,5 @@
 import SwiftUI
+import WeatherClient
 
 struct AppView: View {
 
