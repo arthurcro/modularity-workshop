@@ -11,7 +11,7 @@ public struct TemperatureView: View {
             Text(viewModel.temperature ?? "")
                 .font(.title)
             Button(
-                action: { viewModel.computeTapped() },
+                action: { viewModel.weatherTapped() },
                 label: {
                     Text(viewModel.isLoading ? "Loading..." : "Tap me")
                         .bold()

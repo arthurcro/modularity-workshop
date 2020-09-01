@@ -4,30 +4,34 @@ import WeatherClient
 
 public class TemperatureViewModel: ObservableObject {
 
-    @Published var temperature: String?
     @Published var isLoading: Bool
+    @Published var temperature: String?
 
-    private let weatherClient: WeatherClient
     private var cancellable: AnyCancellable?
+    private let queue: DispatchQueue
+    private let weatherClient: WeatherClient
+
 
     public init(
         isLoading: Bool = false,
+        queue: DispatchQueue = .main,
         temperature: String? = nil,
         weatherClient: WeatherClient
     ) {
         self.isLoading = isLoading
+        self.queue = queue
         self.temperature = temperature
         self.weatherClient = weatherClient
     }
 
-    func computeTapped() {
+    func weatherTapped() {
         cancellable?.cancel()
         temperature = nil
         isLoading = true
 
         cancellable = weatherClient
             .temperature()
-            .receive(on: DispatchQueue.main)
+            .receive(on: queue)
             .sink(
                 receiveCompletion: { [weak self] error in self?.isLoading = false },
                 receiveValue: { [weak self] response in

@@ -17,6 +17,8 @@
 		8D1851E224FE98C6000F2A65 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370A24FD2749006E54DD /* TemperatureView.swift */; };
 		8D1851EA24FE9B19000F2A65 /* WeatherClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851E924FE9B19000F2A65 /* WeatherClient */; };
 		8D1851EC24FE9B19000F2A65 /* WeatherClient in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851E924FE9B19000F2A65 /* WeatherClient */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8D1851EE24FEA0BB000F2A65 /* WeatherClient in Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851ED24FEA0BB000F2A65 /* WeatherClient */; };
+		8D1851F024FEA0BB000F2A65 /* WeatherClient in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8D1851ED24FEA0BB000F2A65 /* WeatherClient */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8D57370924FD2749006E54DD /* DesigningDependencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57370824FD2749006E54DD /* DesigningDependencyApp.swift */; };
 		8D57370D24FD274A006E54DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57370C24FD274A006E54DD /* Assets.xcassets */; };
 		8D57371024FD274B006E54DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D57370F24FD274B006E54DD /* Preview Assets.xcassets */; };
@@ -78,6 +80,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D1851EF24FEA0BB000F2A65 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D1851F024FEA0BB000F2A65 /* WeatherClient in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1851EE24FEA0BB000F2A65 /* WeatherClient in Frameworks */,
 				8D1851CA24FE985E000F2A65 /* TemperatureFeature.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +293,7 @@
 				8D1851C524FE985E000F2A65 /* Sources */,
 				8D1851C624FE985E000F2A65 /* Frameworks */,
 				8D1851C724FE985E000F2A65 /* Resources */,
+				8D1851EF24FEA0BB000F2A65 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +301,9 @@
 				8D1851CC24FE985E000F2A65 /* PBXTargetDependency */,
 			);
 			name = TemperatureFeatureTests;
+			packageProductDependencies = (
+				8D1851ED24FEA0BB000F2A65 /* WeatherClient */,
+			);
 			productName = TemperatureFeatureTests;
 			productReference = 8D1851C924FE985E000F2A65 /* TemperatureFeatureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -909,6 +927,10 @@
 			productName = WeatherClientLive;
 		};
 		8D1851E924FE9B19000F2A65 /* WeatherClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatherClient;
+		};
+		8D1851ED24FEA0BB000F2A65 /* WeatherClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WeatherClient;
 		};
