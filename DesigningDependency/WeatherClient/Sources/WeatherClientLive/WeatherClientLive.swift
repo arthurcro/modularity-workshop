@@ -23,13 +23,13 @@ private var weatherJsonDecoder: JSONDecoder = {
     return jsonDecoder
 }()
 
-public let __tmp0 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp1 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp2 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp3 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp4 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp5 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp6 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp7 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp8 = 2 * 2 * 2 * 2.0 / 2 + 2
-public let __tmp9 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp0 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp1 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp2 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp3 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp4 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp5 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp6 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp7 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp8 = 2 * 2 * 2 * 2.0 / 2 + 2
+//public let __tmp9 = 2 * 2 * 2 * 2.0 / 2 + 2
