@@ -24,6 +24,19 @@ final class TemperatureFeatureTests: XCTestCase {
         XCTAssertFalse(viewModel.isLoading)
         XCTAssertTrue(viewModel.temperature == "20.0")
     }
+
+    func testError() {
+        let viewModel = TemperatureViewModel(
+            isLoading: false,
+            temperature: nil,
+            weatherClient: .init(temperature: { Fail(error: NSError(domain: "", code: 0, userInfo: nil)).eraseToAnyPublisher()})
+        )
+        viewModel.weatherTapped()
+        let exp = expectation(description: "Test after 0.2 seconds")
+        XCTWaiter().wait(for: [exp], timeout: 0.2)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertNil(viewModel.temperature)
+    }
 }
 
 extension WeatherResponse {
